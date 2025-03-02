@@ -6,25 +6,29 @@
 }
 
 body{
-
+height:100vh;
 display:flex;
 flex-direction: column;
-
+background-color: rgb(247, 247, 247);
 }
+
+
 
 header {
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: center; 
+  align-items: center; /* 中央揃え */
   text-align: center;
   margin:20px;
   padding-top: 20px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 0 10px rgb(252, 252, 252);
+  box-shadow: 0 0 0 20px rgb(252, 252, 255);
 }
 .main{
   display:flex;
+  justify-content: center;
+  min-height: 100vh;
   max-width: 1400px;
   margin: 0 auto; /* Centers the page horizontally */
 }
@@ -74,6 +78,5 @@ footer{
 .footer_text{
  font-size:15px;
  color:white;
- 
 
 }

@@ -1,5 +1,33 @@
 .main{
+  padding-top: 10px;
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
+}
 
-  height:100vh;
+.photo{
+ 
+ justify-content: center;
+ position: relative;
+ transform: translateY(-100%);
 
 }
+.food_img{
+  width: 30%; height: auto;
+ }
+
+ .list_menu{
+    display:flex;
+    list-style: none;
+    justify-content: center;
+    gap:30px;
+
+ }
+
+ .btn_menu{
+
+  font-size: 20px;
+  border: none;
+  background: none;
+ }
