@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace; /* Default font */
+}
+
+body{
+
+display:flex;
+flex-direction: column;
+
+}
+
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  margin:20px;
+  padding-top: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 10px rgb(252, 252, 252);
+}
+.main{
+  display:flex;
+  max-width: 1400px;
+  margin: 0 auto; /* Centers the page horizontally */
+}
+
+.top-nav{
+  display: flex;
+  flex-direction: column; /* 縦並び */
+  justify-content: center; /* 中央寄せ */
+  align-items: center;
+  width: 100%;
+}
+
+.ul-nav{
+  display: flex;
+  list-style: none;
+  justify-content: center; /* ナビゲーションの中央寄せ */
+  padding: 0;
+  gap: 30px; /* リスト間の余白 */
+
+}
+
+.li_header {
+  margin: 0; /* 不要なマージンを削除 */
+}
+
+.restaurant_name{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center; /* テキスト中央 */
+  margin-bottom: 10px; /* 下のナビとの余白 */
+}
+.nav-link{
+ font-size:15px;
+ font-weight: bold;
+
+}
+
+footer{
+ display:flex;
+ justify-content: center;
+ text-align: center; 
+ margin:20px;
+ background-color: black;
+ box-shadow: 0 0 0 20px rgb(0, 0, 0);
+}
+
+.footer_text{
+ font-size:15px;
+ color:white;
+ 
+
+}
