@@ -1,20 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace; /* Default font */
+}
+
+body{
+height:100vh;
+display:flex;
+flex-direction: column;
+background-color: rgb(247, 247, 247);
+}
+
+
 .main{
-  padding-top: 10px;
- display:flex;
- flex-direction: column;
- justify-content: center;
+height:100vh;
+padding-top: 10px;
+display:flex;
+flex-direction: column;
+
  text-align: center;
 }
 
 .photo{
  
- justify-content: center;
- position: relative;
- transform: translateY(-100%);
+
+
+ margin-top:1%;
 
 }
 .food_img{
-  width: 30%; height: auto;
+  width: 20%; height: auto;
  }
 
  .list_menu{
@@ -24,10 +40,23 @@
     gap:30px;
 
  }
+ .container_buttons{
+  margin-top: 2%;
+ }
 
  .btn_menu{
-
-  font-size: 20px;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: bold;
   border: none;
   background: none;
+ }
+
+ .allergi{
+  margin:5%;
+
+ }
+
+ .title{
+  font-size: 1.5em;
  }

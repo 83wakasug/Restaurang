@@ -51,3 +51,105 @@ const menu = {
     }
   ]
 };
+
+
+const all = document.getElementById("all");
+const appertizers = document.getElementById("appertizers");
+const mainCourse = document.getElementById("main_course");
+const desserts = document.getElementById("desserts");
+const menuContainer = document.getElementById("menu");
+
+all.onclick = function(){
+  menuContainer.innerHTML = "";
+ getAppertizers(menuContainer);
+ getMain(menuContainer);
+ getDesserts(menuContainer);
+
+}
+
+function getAppertizers(menuContainer){
+  let divAppertizers = document.createElement("div"); 
+       divAppertizers.className="div_Appertizers";
+      
+       p_title=document.createElement("p");
+       p_title.textContent="Appetizers";
+       p_title.className="title";
+       divAppertizers.appendChild(p_title);
+
+       menu.appetizers.forEach (appetizer=>{
+      
+      let sp_name = document.createElement("span");
+      let sp_price= document.createElement("span");
+      let sp_description= document.createElement("span");
+    
+      sp_name.textContent=appetizer.name;
+      sp_price.textContent=`$${appetizer.price}`;
+      sp_description.textContent=appetizer.description;
+
+    
+      divAppertizers.appendChild(sp_name);
+      divAppertizers.appendChild(sp_price);
+      divAppertizers.appendChild(sp_description);
+
+    })
+    menuContainer.appendChild(divAppertizers);
+}
+
+
+function getMain(menuContainer){
+  let divmain = document.createElement("div"); 
+       divmain.className="div_main";
+      
+       p_title=document.createElement("p");
+       p_title.textContent="Main Course";
+       p_title.className="title";
+       divmain.appendChild(p_title);
+
+       menu.mainCourses.forEach (mainCourse=>{
+      
+      let sp_name = document.createElement("span");
+      let sp_price= document.createElement("span");
+      let sp_description= document.createElement("span");
+    
+      sp_name.textContent=mainCourse.name;
+      sp_price.textContent=`$${mainCourse.price}`;
+      sp_description.textContent=mainCourse.description;
+
+    
+      divmain.appendChild(sp_name);
+      divmain.appendChild(sp_price);
+      divmain.appendChild(sp_description);
+
+    })
+    menuContainer.appendChild(divmain);
+}
+
+
+function getDesserts(menuContainer){
+  let divDesserts = document.createElement("div"); 
+  divDesserts.className="div_deserts";
+      
+       p_title=document.createElement("p");
+       p_title.textContent="Deserts";
+       p_title.className="title";
+       divDesserts.appendChild(p_title);
+
+       menu.desserts.forEach (dessert=>{
+      let div_eachMenu = document.createElement("div");
+      let sp_name = document.createElement("span");
+      let sp_price= document.createElement("span");
+      let sp_description= document.createElement("span");
+      
+      sp_name.textContent=dessert.name;
+      sp_price.textContent = `$${dessert.price}`;
+      sp_description.textContent=dessert.description;
+
+      
+      div_eachMenu.appendChild(sp_name);
+      div_eachMenu.appendChild(sp_price);
+      div_eachMenu.appendChild(sp_description);
+      divDesserts.appendChild(div_eachMenu);
+
+    })
+    menuContainer.appendChild(divDesserts);
+}
