@@ -5,29 +5,18 @@
   font-family: monospace; /* Default font */
 }
 
-body{
-height:100vh;
-display:flex;
-flex-direction: column;
-background-color: rgb(247, 247, 247);
-}
 
 
 .main{
-height:100vh;
+ flex-grow:1;
 padding-top: 10px;
 display:flex;
 flex-direction: column;
-
  text-align: center;
 }
 
 .photo{
- 
-
-
  margin-top:1%;
-
 }
 .food_img{
   width: 20%; height: auto;
@@ -44,13 +33,21 @@ flex-direction: column;
   margin-top: 2%;
  }
 
- .btn_menu{
+ .btn_menu {
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
-  border: none;
-  background: none;
- }
+  border: 2px solid #d35400;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn_menu:hover {
+  background: #d35400;
+  color: white;
+}
 
  .allergi{
   margin:5%;
@@ -60,5 +57,94 @@ flex-direction: column;
  .title{
   font-size: 1.5em;
   margin:1%;
-  border-bottom:2px solid black;
+
  }
+
+ .container_eachMenu{
+  margin:1%;
+ }
+
+ .allergi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2% auto;
+  padding-bottom: 40px; /* フッターと重ならないように余白を確保 */
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.container_eachMenu {
+  background: #fff;
+  padding: 20px;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+
+.manu_name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.price {
+  margin:5px;
+  font-size: 1.2em;
+  color: #d35400; /* オレンジ系で価格を強調 */
+}
+
+.description {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+  .food_img {
+    width: 80%; /* 画像をスマホ用に大きくする */
+  }
+  
+  .list_menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn_menu {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .main {
+    max-width: 1600px;
+    display:flex;
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+  }
+  
+  .allergi {
+    max-width: 1200px;
+    font-size: 1.2em;
+  }
+
+  .btn_menu {
+    font-size: 2.5em;
+  }
+
+  footer {
+    font-size: 1.2em;
+  }
+}
