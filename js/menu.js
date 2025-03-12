@@ -1,54 +1,40 @@
+class Menu {
+  constructor(name, price, description) {
+    this.name = name;
+    this.price = price;
+    this.description = description;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  getPrice() {
+    return this.price;
+  }
+
+  getDescription() {
+    return this.description;
+  }
+}
+
+
+
 const menu = {
   appetizers: [
-    {
-      name: "Bruschetta al Pomodoro",
-      price: 6,
-      description: "Fresh tomato, basil, and garlic on toasted baguette slices, drizzled with olive oil."
-    },
-    {
-      name: "Smoked Salmon Tartare",
-      price: 9,
-      description: "Finely diced smoked salmon, capers, and shallots, served with a zesty lemon dressing."
-    },
-    {
-      name: "Roasted Beet Salad",
-      price: 7,
-      description: "Roasted beets with goat cheese, arugula, walnuts, and a balsamic glaze."
-    }
+    new Menu("Bruschetta al Pomodoro", 6, "Fresh tomato, basil, and garlic on toasted baguette slices, drizzled with olive oil."),
+    new Menu("Smoked Salmon Tartare", 9, "Finely diced smoked salmon, capers, and shallots, served with a zesty lemon dressing."),
+    new Menu("Roasted Beet Salad", 7, "Roasted beets with goat cheese, arugula, walnuts, and a balsamic glaze.")
   ],
   mainCourses: [
-    {
-      name: "Grilled Filet Mignon",
-      price: 28,
-      description: "A tender 8oz filet, grilled to perfection, served with mashed potatoes and seasonal vegetables."
-    },
-    {
-      name: "Linguine alla Vongole",
-      price: 22,
-      description: "Fresh linguine pasta with a savory clam sauce, garlic, and white wine."
-    },
-    {
-      name: "Vegetable Risotto",
-      price: 18,
-      description: "A creamy risotto made with seasonal vegetables and a touch of parmesan cheese."
-    }
+    new Menu("Grilled Filet Mignon", 28, "A tender 8oz filet, grilled to perfection, served with mashed potatoes and seasonal vegetables."),
+    new Menu("Linguine alla Vongole", 22, "Fresh linguine pasta with a savory clam sauce, garlic, and white wine."),
+    new Menu("Vegetable Risotto", 18, "A creamy risotto made with seasonal vegetables and a touch of parmesan cheese.")
   ],
   desserts: [
-    {
-      name: "Tiramisu",
-      price: 6,
-      description: "A classic Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder."
-    },
-    {
-      name: "Crème Brûlée",
-      price: 7,
-      description: "A rich and creamy vanilla custard with a caramelized sugar top."
-    },
-    {
-      name: "Chocolate Fondant",
-      price: 8,
-      description: "A decadent molten chocolate cake served with vanilla ice cream."
-    }
+    new Menu("Tiramisu", 6, "A classic Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder."),
+    new Menu("Crème Brûlée", 7, "A rich and creamy vanilla custard with a caramelized sugar top."),
+    new Menu("Chocolate Fondant", 8, "A decadent molten chocolate cake served with vanilla ice cream.")
   ]
 };
 
@@ -104,7 +90,7 @@ function createMenuSection(categoryName,items){
       let sp_description= document.createElement("p");
       sp_description.className="description";
       sp_name.textContent=item.name;
-      sp_price.textContent=`$${item.price}`;
+      sp_price.textContent=`$${item.getPrice()}`;
       sp_description.textContent=item.description;
 
     
