@@ -48,6 +48,10 @@ header {
   margin: 0; 
 }
 
+.li_header:hover .nav-link {
+  color:rgba(185, 18, 165, 0.922)
+}
+
 .restaurant_name{
   font-size: 20px;
   font-weight: bold;
@@ -75,6 +79,65 @@ footer {
  color:white;
 
 }
+#hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
 
+/* メニューの初期状態を隠す */
+.ul-nav {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  gap: 30px;
+  transition: transform 0.3s ease-in-out;
+}
 
+/* モバイル用のメニュースタイル */
+@media screen and (max-width: 768px) {
+  .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px 20px;
+  }
 
+  .restaurant_name {
+      flex-grow: 1;
+      text-align: center;
+  }
+
+  #hamburger {
+      display: block;
+  }
+
+  .ul-nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-115%);
+      padding: 20px 0;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .ul-nav.active {
+      transform: translateY(0);
+  }
+
+  .li_header {
+      padding: 15px;
+  }
+
+  .nav-link {
+      color: white;
+      font-size: 18px;
+  }
+}

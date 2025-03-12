@@ -5,3 +5,18 @@
   max-width: 1400px;
   margin: 0 auto; /* Centers the page horizontally */
 }
+
+.home{
+  color:rgba(178, 12, 151, 0.862)
+ 
+  }
+
+@media (max-width: 768px) {
+  .main{
+    display:flex;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 300px;
+    margin: 0 auto; /* Centers the page horizontally */
+  }
+}

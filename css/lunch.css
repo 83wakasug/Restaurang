@@ -5,6 +5,11 @@
   text-align: center;
 
 }
+
+.lunch{
+  color:rgba(178, 12, 151, 0.862)
+ 
+  }
 .main {
   flex-grow: 1; /* 余白を埋めてフッターを下に押し出す */
   display: flex;

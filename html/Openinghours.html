@@ -3,36 +3,36 @@
     <head>
         <meta charset = "UTF-8">
         <link rel="stylesheet" href="../css/common.css">
-        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/operatinghousers.css">
     </head>
     <body>
-        <header class="header">
-          <p>Sunny Side Bistro</p>
-            <nav class="top-nav"> 
-              <ul class="ul-nav">
-                <span class="restaurant_name">Sunny Side Bistro</span>
-                <li  class=" li_header"><a  class ="nav-link"  href="index.html">Home</a></li>
-                <li class=" li_header"><a  class =" nav-link"  href="menu.html">Menu</a></li>
-                <li class=" li_header"><a  class =" nav-link"  href="lunchmenu.html">Lunch Menu</a></li>
-                <li class=" li_header"><a  class =" nav-link"  href="about.html">About</a></li>
-                <li class=" li_header"><a class =" nav-link"  href="Openinghours.html">Opening Hours</a></li>
-              </ul>
-            </nav>
-        </header> 
+      <header class="header">
+        <nav class="top-nav">
+          <span class="restaurant_name">Sunny Side Bistro</span>
+          <span id="hamburger">☰</span>
+          <ul class="ul-nav">
+            <li  class=" li_header"><a  class ="nav-link home"  href="index.html">Home</a></li>
+            <li class=" li_header"><a  class =" nav-link menu"  href="menu.html">Menu</a></li>
+            <li class=" li_header"><a  class =" nav-link lunch"  href="lunchmenu.html">Lunch Menu</a></li>
+            <li class=" li_header"><a  class =" nav-link about"  href="about.html">About</a></li>
+            <li class=" li_header"><a class =" nav-link opening"  href="Openinghours.html">Opening Hours</a></li>
+          </ul>
+        </nav>
+    </header> 
         
         <section class="main">
-            <div>
-                <h2>Hours of Operation</h2>
+            <div class="openingHours">
+                <h2><u>Hours of Operation</u></h2>
                 <h3>Monday - Friday: 11:00 AM - 10:00 PM</h3>
                 <h3>Saturday - Sunday: 12:00 PM - 10:00 PM</h3>
             </div> 
 
-            <div>
-              <h2>Address</h2>
-              <address>Stora gatan 1</address>
-              <p>031-11 11 00</p>
-              <p>info@restrang.se</p>
-          </div> 
+            <div class="contact">
+              <h2><u>Address</u></h2>
+              <h3>Stora gatan 1</h3>
+              <h3>031-11 11 00</h3>
+              <h3>info@restrang.se</h3>
+            </div> 
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10439.84328119111!2d11.977441833067996!3d57.69560167717466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sse!4v1741599890755!5m2!1sja!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
@@ -48,6 +48,8 @@
            <div>
             <img>
            </div>
-        </footer>    
+        </footer> 
+        
+        <script src="../js/common.js"></script>
     </body>
 </html>

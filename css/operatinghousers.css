@@ -1,0 +1,21 @@
+
+.main{
+  flex-grow:1;
+  padding-top: 10px;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .contact{
+   
+    margin:2%;
+
+  }
+
+  .opening{
+    color:rgba(178, 12, 151, 0.862)
+   
+    }
